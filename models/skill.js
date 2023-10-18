@@ -16,5 +16,6 @@ function getAll() {
 }
 
 function getOne(id) {
+    id = parseInt(id);
     return skills.find(skill => id === skill.id);
 }
