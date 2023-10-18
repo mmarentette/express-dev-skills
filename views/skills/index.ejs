@@ -1,2 +1,13 @@
 <%- include('../partials/header') %>
+
+    <ul>
+        <% skills.forEach(skill => { %>
+            <li>
+                <%= skill.skill %>
+                - Proficiency:
+                <%= skill.proficiency %>
+            </li>
+        <% }) %>
+    </ul>
+
 <%- include('../partials/footer') %>
