@@ -9,7 +9,8 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne
 };
 
 function getAll() {
@@ -17,6 +18,7 @@ function getAll() {
 }
 
 function getOne(id) {
+    // Convert id string to integer
     id = parseInt(id);
     return skills.find(skill => id === skill.id);
 }
@@ -28,4 +30,13 @@ function create(skill) {
     skill.proficiency = 'low';
     skills.push(skill);
     console.log(skills);
+}
+
+function deleteOne(id) {
+    // Convert id string to integer
+    id = parseInt(id);
+    // Find index based on id of skill object
+    const idx = skills.findIndex(skill => id === skill.id);
+    // Delete one element from array at this index
+    skills.splice(idx, 1);
 }

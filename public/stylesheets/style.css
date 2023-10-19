@@ -9,3 +9,12 @@ h1 {
 a {
   color: #00B7FF;
 }
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.delete-form button {
+  background-color: red;
+}
