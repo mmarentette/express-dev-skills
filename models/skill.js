@@ -12,7 +12,7 @@ module.exports = {
 };
 
 function getAll() {
-    return skills
+    return skills;
 }
 
 function getOne(id) {
