@@ -8,7 +8,8 @@ const skills = [
 
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
 };
 
 function getAll() {
@@ -18,4 +19,13 @@ function getAll() {
 function getOne(id) {
     id = parseInt(id);
     return skills.find(skill => id === skill.id);
+}
+
+function create(skill) {
+    // Add the id to the skill object
+    skill.id = skills.length + 1;
+    // Assume we star with low proficiency when adding a new skill
+    skill.proficiency = 'low';
+    skills.push(skill);
+    console.log(skills);
 }
